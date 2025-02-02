@@ -1,0 +1,299 @@
+*{margin: 0; padding: 0;}
+
+a{text-decoration: none;}
+
+.separateur{
+  margin: 10vh auto;
+  border-top: 5px solid #fce781;
+  width: 85%;
+}
+
+/*----- HEADER & FOOTER -------------------------------------------------------------------------------------------------------------------------------*/
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fce781;
+  height: 50px;
+}
+.header h1{
+  font-size: 25px;
+  color: #04151f;
+}
+.dropdown { /* The container <div> - needed to position the dropdown content */
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content { /* Dropdown Content (Hidden by Default) */
+  display: none;
+  position: absolute;
+  background-color: #fce781;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a { /* Links inside the dropdown */
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #e5d481;} /* Change color of dropdown links on hover */
+.dropdown:hover .dropdown-content {display: block;} /* Show the dropdown menu on hover */
+.dropdown:hover .dropbtn {background-color: #fce781;} /* Change the background color of the dropdown button when the dropdown content is shown */
+
+.footer{
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+  align-items: center;
+  background-color: #fce781;
+  height: 100px;
+}
+.footer img{
+  width: 55px;
+  height: 55px;
+}
+
+/*----- HOME -------------------------------------------------------------------------------------------------------------------------------*/
+
+.home{
+  background: linear-gradient(180deg, #04151f 0%,#020c12 100%);
+  padding: 10vh 0vh;
+}
+.home .row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.home .col{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 1.2vh;
+}
+.home .more{
+  margin: 20px auto;
+  max-width: 250px;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #04151f;
+  background-color: #fce781;
+}
+.home .more img{
+  width: 50px;
+}
+
+.home img {
+  width: auto;
+  max-height: 400px;
+  transition: 0.25s ease-in-out;
+  object-fit: cover;
+}
+.home img:hover{
+  transform: scale(1.2);
+}
+.home iframe{
+  width: 711.11px; height: 400px;
+}
+.home h1{
+  font-size: 24px; text-align: center; color: #eaecee; text-shadow: 0 0 5px rgba(234, 236, 238, 0.25); margin-bottom: 50px;
+  text-decoration: underline; text-underline-offset: 7.5px;
+}
+.home h2{
+  font-size: 18px; text-align: center; color: #04151f; background-color: #fce781; border-radius: 5px; padding: 5px 13px;
+}
+.home h3{
+  font-size: 16px; text-align: right; color: #74767d;
+}
+.home a{
+  display: inline-block; overflow: hidden;
+}
+.home p{
+  font-size: 18px; text-align: left; color: #eaecee; line-height: 20pt; font-family: myFont;
+}
+
+.home .animations3d .col iframe{
+  width: calc(711.11px / 1.25); height: calc(400px / 1.25);
+}
+
+/*----- GALLERY -------------------------------------------------------------------------------------------------------------------------------*/
+
+.gallery{
+  background: linear-gradient(180deg, #04151f 0%,#020c12 100%);
+  padding: 10vh 0vh;
+}
+
+.gallery .nav{
+  padding: 10px 20px;
+  background-color: #fce781;
+  border: none;
+  margin: auto;
+  width: 10%;
+}
+
+.gallery .container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  gap: 10px;
+}
+.gallery .col{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 1vh;
+  margin-bottom: 40px;
+}
+.gallery img {
+  width: auto;
+  max-height: 400px;
+  transition: 0.25s ease-in-out;
+  object-fit: cover;
+}
+.gallery img:hover{
+  transform: scale(1.2);
+}
+.gallery iframe{
+  width: 711.11px; height: 400px;
+}
+.gallery h1{
+  font-size: 24px; text-align: center; color: #eaecee; text-shadow: 0 0 5px rgba(234, 236, 238, 0.5);
+}
+.gallery h2{
+  font-size: 18px; text-align: right; color: #04151f; background-color: #fce781; border-radius: 5px; padding: 5px 13px;
+}
+.gallery h3{
+  font-size: 16px; text-align: right; color: #74767d;
+}
+.gallery a{
+  display: inline-block; overflow: hidden;
+}
+.gallery p{
+  font-size: 18px; text-align: left; color: #eaecee; line-height: 20pt; font-family: myFont;
+}
+
+button{
+  margin: auto;
+  border: none;
+  padding: 5px 20px;
+  font-size: 14px;
+  color: #04151f;
+  background-color: #fce781;
+  cursor: pointer;
+}
+dialog button{
+  position: absolute; top: 0; right: 0;
+}
+dialog{
+  z-index: 1;
+  position: fixed;
+  box-shadow: 0px 0px 50vh 100vh rgba(0,0,0,0.9);
+  border: none;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: auto;
+  padding: 40px;
+  background-color: #04151f;
+}
+dialog div{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+dialog .tags{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 10px;
+}
+dialog h3{
+  position: absolute;
+  bottom: 0; right: 0;
+  margin: 10px;
+}
+
+/*----- CONTACT -------------------------------------------------------------------------------------------------------------------------------*/
+
+.contact{
+  background: linear-gradient(180deg, #04151f 0%,#020c12 100%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h1{
+  font-size: 24px; text-align: center; color: #eaecee; text-shadow: 0 0 5px rgba(234, 236, 238, 0.25); margin-bottom: 50px;
+  text-decoration: underline; text-underline-offset: 7.5px;
+}
+
+.contact .row{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 400px;
+  height: 500px;
+}
+.contact .col{
+  padding: 8px 10px 8px 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #04151f;
+  background-color: #fce781;
+}
+
+.contact img{
+  width: 50px;
+}
+
+/*----- FORTNITE -------------------------------------------------------------------------------------------------------------------------------*/
+
+.chapter1 h3, .chapter2 h3, .chapter3 h3, .chapter4 h3{
+  color: #7e7e7e;
+  margin: auto;
+}
+
+.chapter1 img, .chapter2 img, .chapter3 img, .chapter4 img{
+  filter: blur(5px);
+
+}
+
+/* .chapter1{
+background-image: url("./images/assets/fortnite/chapter1.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+.chapter2{
+background-image: url("./images/assets/fortnite/chapter2.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+.chapter3{
+background-image: url("./images/assets/fortnite/chapter3.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+.chapter4{
+background-image: url("./images/assets/fortnite/chapter4.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+.line-break {
+  width: 100%;
+} */
