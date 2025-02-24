@@ -147,3 +147,6 @@
 <a href="./pages/gallery.php" class="more"><img src="./images/assets/icons/more.png"><h2>Show more</h2></a>
 
 </section>
+
+</body>
+</html>
