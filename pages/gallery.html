@@ -1,0 +1,40 @@
+async function fetchCSV(filePath) {
+    const response = await fetch(filePath);
+    const text = await response.text();
+    return text.split('\n').map(row => row.split(','));
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
+    const categoriesData = await fetchCSV("../Categories.csv");
+    const artworksData = await fetchCSV("../Skaros.csv");
+    
+    // Populate category dropdown
+    const navSelect = document.querySelector(".nav");
+    categoriesData.slice(1).forEach(row => {
+        const option = document.createElement("option");
+        option.classList.add("nav-item");
+        option.dataset.categories = row[1].replace(/\s+/g, "");
+        option.textContent = row[1];
+        navSelect.appendChild(option);
+    });
+    
+    // Populate artworks
+    const container = document.querySelector(".container");
+    artworksData.slice(1).forEach((row, i) => {
+        if (row[0] !== "X") {
+            const col = document.createElement("div");
+            col.classList.add("col");
+            col.dataset.categories = `${row[4]}|${row[5]}`.replace(/\s+/g, "");
+            col.innerHTML = `
+                <h1>- | ${row[1]} | -</h1>
+                ${row[2].includes("https") ? 
+                    `<iframe src='${row[2]}' frameborder='0' allowfullscreen loading='lazy'></iframe>` : 
+                    `<a href='../images/artworks/${row[2]}'>
+                        <img src='${row[3] ? `../images/previews/${row[3]}` : `../images/artworks/${row[2]}`}'>
+                    </a>`
+                }
+            `;
+            container.appendChild(col);
+        }
+    });
+});
