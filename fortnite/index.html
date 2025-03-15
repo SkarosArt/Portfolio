@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortnite Random</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div class="osf">
@@ -35,7 +35,7 @@
     function getRandomPlace(chapter, chapterName) {
         const place = chapter[Math.floor(Math.random() * chapter.length)];
         document.getElementById("result").innerHTML = place;
-        document.getElementById("image").src = `images/${chapterName}/${place}.png`;
+        document.getElementById("image").src = `./images/${chapterName}/${place}.png`;
         document.getElementById("image").style.display = "block";
     }
 
