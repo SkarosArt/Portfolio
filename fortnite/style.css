@@ -1,0 +1,68 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #383838;
+}
+
+form{
+    display: flex;
+    flex-direction: row;
+}
+
+.osf{
+    width: 50%;
+    height: 25%;
+    margin: auto;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.osf2{
+    width: 50%;
+    height: 25%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn_chapter{
+    margin: auto 25px;
+    width: 250px;
+    height: 70px;
+    border: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#chapter6{
+    background: linear-gradient(to right, #ff3361, #ff33c7);
+}
+
+#chapter1{
+    background: linear-gradient(to right, #51a6d1, #51d1aa);
+}
+
+h1{
+    color: white;
+    font-size: 25px;
+}
+
+#result{
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+}
+
+img{
+    margin-top: 25px;
+}

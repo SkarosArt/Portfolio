@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite Random</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="osf">
+        <h1>Random</h1>
+        <button id="chapter1" class="btn_chapter">Chapter 1</button>
+        <button id="chapter6" class="btn_chapter">Chapter 6</button>
+    </div>
+    <div class="osf2">
+        <div id="result"></div>
+        <img id="image" src="" width="700" height="auto" style="display:none;" />
+    </div>
+</body>
+</html>
+
+<script>
+    const chapter6 = [
+        "Whiffy Whraf", "Flooded Frogs", "Magic Mosses", "Pumped Power", "Demon's Dojo", "Brutal Boxcars",
+        "Shiny Shafts", "Outlow Oasis", "Crime City",
+        "Foxy Floodgate", "Seaport City", "Shinning Span", "Shogun's Solitude", "Canyon Crossing", "Masked Meadows", "Hopeful Heights", "Kappa Kappa Factory"
+    ];
+    const chapter1 = [
+        "Pleasant Park", "Anarchy Acres", "Look Lake", "Tomato Town", "Wailing Woods",
+        "Dusty Depot", "Lonely Lodge", "Greasy Grove", "Salty Springs", "Retail Row",
+        "Flush Factory", "Fatal Fields", "Moisty Mire", "Chez nous", "Containers",
+        "Circuit", "Prison"
+    ];
+
+    function getRandomPlace(chapter, chapterName) {
+        const place = chapter[Math.floor(Math.random() * chapter.length)];
+        document.getElementById("result").innerHTML = place;
+        document.getElementById("image").src = `images/${chapterName}/${place}.png`;
+        document.getElementById("image").style.display = "block";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("chapter1").addEventListener("click", () => getRandomPlace(chapter1, "chapter1"));
+        document.getElementById("chapter6").addEventListener("click", () => getRandomPlace(chapter6, "chapter6"));
+    });
+</script>
