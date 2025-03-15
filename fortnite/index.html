@@ -35,7 +35,7 @@
     function getRandomPlace(chapter, chapterName) {
         const place = chapter[Math.floor(Math.random() * chapter.length)];
         document.getElementById("result").innerHTML = place;
-        document.getElementById("image").src = `./images/${chapterName}/${place}.png`;
+        document.getElementById("image").src = `../fortnite/images/${chapterName}/${place}.png`;
         document.getElementById("image").style.display = "block";
     }
 
